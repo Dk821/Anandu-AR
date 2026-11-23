@@ -12,11 +12,13 @@ import {
   HeartHandshake,
   FileSpreadsheet,
   GraduationCap,
+  Mail,
 } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
+import LinkedInIcon from './LinkedInIcon';
 
 export default function Hero() {
-  const { personal } = portfolioData;
+  const { personal, contact } = portfolioData;
 
   const handleScrollToAbout = (e) => {
     e.preventDefault();
@@ -89,6 +91,30 @@ export default function Hero() {
               >
                 <Download className="w-5 h-5 transition-transform duration-200 group-hover:-translate-y-0.5" />
                 <span>Download Resume</span>
+              </a>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-2.5 mb-8">
+              <span className="text-xs font-bold uppercase tracking-wider text-content-muted mr-1">
+                Connect with me
+              </span>
+              <a
+                href={`mailto:${contact.email}`}
+                title={contact.email}
+                aria-label={`Email ${personal.name}`}
+                className="w-10 h-10 rounded-xl bg-white border border-surface-border hover:border-brand-accent hover:bg-brand-ice text-brand-blue flex items-center justify-center shadow-xs transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent"
+              >
+                <Mail className="w-4 h-4" />
+              </a>
+              <a
+                href={contact.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn profile"
+                aria-label={`${personal.name} on LinkedIn`}
+                className="w-10 h-10 rounded-xl bg-white border border-surface-border hover:border-brand-accent hover:bg-brand-ice text-brand-blue flex items-center justify-center shadow-xs transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent"
+              >
+                <LinkedInIcon className="w-4 h-4" />
               </a>
             </div>
 
