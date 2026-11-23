@@ -7,6 +7,12 @@ export const portfolioData = {
     resumeUrl: "/Anandu-A-R-Resume.pdf",
     highlights: ["Healthcare Operations", "Patient Safety", "Quality Improvement"],
   },
+  contact: {
+    email: "aranandu5@gmail.com",
+    linkedin: "https://www.linkedin.com/in/ananduar/",
+    location: "Bangalore, India",
+    availability: "Open to healthcare administration, operations and quality improvement opportunities",
+  },
   about: {
     heading: "About Me",
     subtitle: "Dedicated to Better Healthcare and Hospital Operations",
